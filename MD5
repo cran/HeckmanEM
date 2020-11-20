@@ -1,0 +1,16 @@
+ef5ca7832ad00326b16805b7f0b79868 *CHANGELOG
+de0f9fdcc4e94e60d03a472edd9f5262 *DESCRIPTION
+e7b19fbf4d01d6307dda8c181ec929c0 *NAMESPACE
+6f4f6c947123c09f4a94a4c1c9745c86 *R/HeckmanEM.R
+00ae4d15bf9d9df79f72caaf23b79821 *R/MI.R
+a29509928dd33dd8d58c4329e951f46f *R/S3functions.R
+025a92a9183919e948207385aaa824c1 *R/criteria.R
+9e66c0181299f32742628029e633da1e *R/envelopes.R
+78981d8e7678d58180326ac9fce57aa1 *R/rHeckman.R
+5059ed0b1b1590a9f8121edbe1c7b7c2 *R/utilitaries.R
+026c23a8a90c6ab44a3594d81df5868e *inst/CITATION
+94afe0f085c51f8db1d630fdd2f423bd *man/HeckmanEM.Rd
+b8c2f357aa3f4d7e6f1949f2b4c76355 *man/HeckmanEM.criteria.Rd
+3bd95e481d3eda0acd0a6abe4e527baa *man/HeckmanEM.envelope.Rd
+27936b0b61769e7a8978f9a14592f8d2 *man/HeckmanEM.infomat.Rd
+8533ff5b195367998102984daa16ff5d *man/rHeckman.Rd
