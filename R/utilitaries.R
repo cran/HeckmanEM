@@ -1,7 +1,7 @@
 ################################################################################
 ## NOT SHARED FUNCTIONS
 ################################################################################
-#' @importFrom stats as.formula dnorm dt optimize pnorm pt
+#' @importFrom stats as.formula dnorm dt optimize pnorm pt 
 ################################################################################
 ### likelihood function  : Normal
 ################################################################################
@@ -147,9 +147,9 @@ while((criterio > error) && (count <= iter.max)){
  
  lkante1<-lkante
  lkante<- likeL(y, x, w, cc, beta, gama, Sigma)
- criterio<-sqrt(abs(1-lkante1/lkante))
+ criterio <- sqrt(abs(1-lkante1/lkante))
   
- if((rho >=1 - 1e-07)&&(rho <= -1 + 1e-07)) {
+ if((rho >= 1 - 1e-07)&&(rho <= -1 + 1e-07)) {
      stop("EM did not coverge")#criterio<-0.0000000000001
   }
  }
@@ -284,9 +284,9 @@ while((criterio > error) && (count <= iter.max)){
         SigmaUiA<- Sigma*nu/(nu+2)
         auxupper<- -mu2[i]
         
-        auxU1 <- pt(auxupper/sqrt(SigmaUiA[2,2]),nu+2)
+        auxU1 <- stats::pt(auxupper/sqrt(SigmaUiA[2,2]),nu+2)
         
-        auxU2 <- pt(auxupper/sqrt(SigmaUi[2,2]),nu) 
+        auxU2 <- stats::pt(auxupper/sqrt(SigmaUi[2,2]),nu) 
         
          if(auxU2 == 0) auxU2<- .Machine$double.xmin
          

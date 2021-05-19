@@ -85,7 +85,7 @@ resMT <- function(y, x, w, cc, beta=beta, gama=gama, rho=rho, sigma=sigma, nu, f
 
   for (i in 1:n){
     resm[i] <-  1-cc[i]+log(S[i])
-    resmt[i] <-   sqrt(-2*((1-cc[i])*log(1-cc[i]-resm[i])+resm[i]))*sign(resm[i])
+    resmt[i] <- sqrt(-2*((1-cc[i])*log(1-cc[i]-resm[i])+resm[i]))*sign(resm[i])
   }
 
   return(list(resm=resm , resmt=resmt))
