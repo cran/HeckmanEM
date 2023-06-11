@@ -1,49 +1,44 @@
-#' Fit the Normal or Student-t Heckman Selectio model.
+#' Fit the Normal or Student-t Heckman Selection model
 #'
-#' `HeckmanEM()` fit the Heckman selection model.
+#' `HeckmanEM()` fits the Heckman selection model.
 #'
 #' @param y A response vector.
 #' @param x A covariate matrix for the response y.
 #' @param w A covariate matrix for the missing indicator cc.
-#' @param cc A missing incidator vector (1=obserced, 0=missing) .
+#' @param cc A missing indicator vector (1=observed, 0=missing) .
 #' @param nu The initial value for the degrees of freedom.
 #' @param family The family to be used (Normal or T).
-#' @param error The abslute convergence error for the EM stopping rule.
+#' @param error The absolute convergence error for the EM stopping rule.
 #' @param iter.max The maximum number of iterations for the EM algorithm.
-#' @param im TRUE/FALSE, boolean to decide if the standard erros of the parameters should be computed.
+#' @param im TRUE/FALSE, boolean to decide if the standard errors of the parameters should be computed.
 #' @param criteria TRUE/FALSE, boolean to decide if the model selection criteria should be computed.
 #' @param verbose TRUE/FALSE, boolean to decide if the progress should be printed in the screen.
 #' @return An object of the class HeckmanEM with all the outputs provided from the function.
 #'
 #' @examples
-#' n <- 100
-#' family <- "T"
-#' nu <- 4
-#' rho <- .6
-#' cens <- .25
+#' n    <- 100
+#' nu   <- 3
+#' cens <- 0.25
 #'
-#' set.seed(20200527)
+#' set.seed(13)
 #' w <- cbind(1,runif(n,-1,1),rnorm(n))
 #' x <- cbind(w[,1:2])
 #' c <- qt(cens, df=nu)
 #'
-#' sigma2 <- 1
-#'
-#' beta <- c(1,0.5)
-#' gamma <- c(1,0.3,-.5)
+#' sigma2   <- 1
+#' beta     <- c(1,0.5)
+#' gamma    <- c(1,0.3,-.5)
 #' gamma[1] <- -c*sqrt(sigma2)
 #'
 #' set.seed(1)
-#' datas <- rHeckman(x,w,beta,gamma,sigma2,rho,nu,family=family)
+#' datas <- rHeckman(x,w,beta,gamma,sigma2,rho = 0.6,nu,family="T")
 #' y <- datas$y
 #' cc <- datas$cc
 #' \donttest{
 #' # Normal EM
-#' res.N <- HeckmanEM(y, x, w, cc, nu = 4, family="Normal", error = 1e-05, iter.max = 50,
-#'                    im=TRUE, criteria = TRUE)
-#' # Student-t: EM
-#' res.T <- HeckmanEM(y, x, w, cc, nu = 4, family="T", error = 1e-05, iter.max = 50,
-#'                    im=TRUE, criteria = TRUE)
+#' res.N <- HeckmanEM(y, x, w, cc, family="Normal",iter.max = 50)
+#' # Student-t EM
+#' res.T <- HeckmanEM(y, x, w, cc, nu = 4, family="T", iter.max = 50)
 #' }
 #' @export
 HeckmanEM <- function(y, x, w, cc, nu = 4, family="T", error = 1e-05,iter.max = 500, im=TRUE, criteria = TRUE, verbose = TRUE){
