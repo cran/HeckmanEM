@@ -2,7 +2,7 @@ Package: HeckmanEM
 Type: Package
 Title: Fit Normal, Student-t or Contaminated Normal Heckman Selection
         Models
-Version: 0.2-1
+Version: 0.2-2
 Authors@R: c(person(given = "Marcos",family = "Prates", role=c("aut","cre","trl"),
        	            email="marcosop@est.ufmg.br", comment = c(ORCID = "0000-0001-8077-4898")),
              person(given = "Victor",family="Lachos", role="aut", comment = c(ORCID = "0000-0002-7239-2459")),
@@ -16,16 +16,17 @@ Imports: mvtnorm (>= 1.1-0), sampleSelection (>= 1.2-6), MomTrunc (>=
         5.79), PerformanceAnalytics (>= 2.0.4), ggplot2, methods
 License: GPL-2
 Encoding: UTF-8
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 NeedsCompilation: no
-Author: Marcos Prates [aut, cre, trl] (<https://orcid.org/0000-0001-8077-4898>),
-  Victor Lachos [aut] (<https://orcid.org/0000-0002-7239-2459>),
+Author: Marcos Prates [aut, cre, trl] (ORCID:
+    <https://orcid.org/0000-0001-8077-4898>),
+  Victor Lachos [aut] (ORCID: <https://orcid.org/0000-0002-7239-2459>),
   Dipak Dey [aut],
   Marcos Oliveira [aut, ctb],
   Christian Galarza [ctb],
   Katherine Loor [ctb],
   Alejandro Ordonez [ctb]
 Maintainer: Marcos Prates <marcosop@est.ufmg.br>
-Packaged: 2024-04-07 18:33:47 UTC; marcos
+Packaged: 2025-06-02 11:21:32 UTC; ALEJANDRO
 Repository: CRAN
-Date/Publication: 2024-04-07 19:02:59 UTC
+Date/Publication: 2025-06-02 11:50:02 UTC
